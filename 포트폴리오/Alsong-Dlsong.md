@@ -13,7 +13,7 @@
 <div markdown="1">
 
 <br>
-<a href="http://alsong-dlsong.com" target="_blank">👉🏻Click👈🏻</a>
+<a href="http://alsong-dlsong.com" target="_blank" rel="noopener noreferrer">👉🏻Click👈🏻</a>
 <br>
 </div>
 </details>
@@ -97,7 +97,7 @@
 <div markdown="1">
 
 <br>
-<a href="https://blog.naver.com/tbtgmltn97/223161573632" target="_blank">👉🏻Click👈🏻</a>
+<a href="https://blog.naver.com/tbtgmltn97/223161573632" target="_blank" rel="noopener noreferrer">👉🏻Click👈🏻</a>
 <br>
 </div>
 </details>
@@ -112,7 +112,7 @@
 <div markdown="1">
 
 <br>
-<a href="https://blog.naver.com/tbtgmltn97/223175583093" target="_blank">👉🏻Click👈🏻</a>
+<a href="https://blog.naver.com/tbtgmltn97/223175583093" target="_blank" rel="noopener noreferrer">👉🏻Click👈🏻</a>
 <br>
 </div>
 </details>
@@ -124,7 +124,7 @@
 <div markdown="1">
 
 <br>
-<a href="https://blog.naver.com/tbtgmltn97/223179578228" target="_blank">👉🏻Click👈🏻</a>
+<a href="https://blog.naver.com/tbtgmltn97/223179578228" target="_blank" rel="noopener noreferrer">👉🏻Click👈🏻</a>
 <br>
 </div>
 </details>
@@ -138,7 +138,7 @@
 <div markdown="1">
 
 <br>
-<a href="https://blog.naver.com/tbtgmltn97/223187187278" target="_blank">👉🏻Click👈🏻</a>
+<a href="https://blog.naver.com/tbtgmltn97/223187187278" target="_blank" rel="noopener noreferrer">👉🏻Click👈🏻</a>
 <br>
 </div>
 </details>
@@ -150,7 +150,7 @@
 <div markdown="1">
 
 <br>
-<a href="https://blog.naver.com/tbtgmltn97/223175565888" target="_blank">👉🏻Click👈🏻</a>
+<a href="https://blog.naver.com/tbtgmltn97/223175565888" target="_blank" rel="noopener noreferrer">👉🏻Click👈🏻</a>
 <br>
 </div>
 </details>
