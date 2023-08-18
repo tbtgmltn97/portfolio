@@ -92,6 +92,8 @@
 #### 1-2. 절대경로로 명시한 코드 (에러 해결)
 <img src="https://postfiles.pstatic.net/MjAyMzA3MjBfOCAg/MDAxNjg5ODM1MTg2MTg3.49txacmApMoHOnzY6-X0vKGSeMjLWMR8nPeO4tUCC7kg.KEuBjbfMK8mybviSZ1wFfvqFYbjFz6NJpRwHax6yFscg.PNG.tbtgmltn97/image.png?type=w773"/>
 
+<br>
+
 <details>
 <summary>💣 자세한 Trouble shooting 기록</summary>
 <div markdown="1">
@@ -101,11 +103,14 @@
 <br>
 </div>
 </details>
+<br>
 
 ### 2. Airflow 권한 이슈
 - 호스트에 마운트 한 디렉터리의 권한을 올바르게 설정해주기!<br>
 	- docker 컨테이너에서 파일시스템 볼륨을 마운트할 때, 해당 볼륨에 대한 권한을 호스트에서 가져오게 되는데, 이 권한은 **호스트에서 마운트 한 디렉터리의 소유자와 그룹에 따라 결정**된다.<br>
  	- 즉, 호스트에서 마운트 한 디렉터리가 docker 컨테이너에 마운트 되면, 컨테이너 내부에서 이 디렉터리에 포함된 파일에 대한 작업을 수행할 때 **호스트의 권한으로 작업하게 된다.**
+
+<br>
 
 <details>
 <summary>💣 자세한 Trouble shooting 기록</summary>
@@ -116,9 +121,13 @@
 <br>
 </div>
 </details>
+<br>
 
 ### 3. mongoDB connection issue
-- pymongo를 통해 python에서 mongoDB에 접근할 때 권한 인증 제대로 명시해주기!<br>
+- pymongo를 통해 python에서 mongoDB에 접근할 때 권한 인증 제대로 명시해주기!
+
+<br>
+
 <details>
 <summary>💣 자세한 Trouble shooting 기록</summary>
 <div markdown="1">
@@ -128,11 +137,15 @@
 <br>
 </div>
 </details>
+<br>
 
 ### 4. GCP에 FTP 서버 연결 issue
 - GCP에 등록한 공개키에 대한 개인키를 filezilla에 제대로 추가하기<br>
 - 인스턴스의 20,21번 포트 열어주기<br>
-- sftp를 통해 접근하기<br>
+- sftp를 통해 접근하기
+
+<br>
+
 <details>
 <summary>💣 자세한 Trouble shooting 기록</summary>
 <div markdown="1">
@@ -142,9 +155,13 @@
 <br>
 </div>
 </details>
+<br>
 
 ### 5. SSH를 통한 GCP 인스턴스 접속 issue (디스크 용량 부족)
-- 인스턴스의 디스크 용량이 부족하면 SSH 서버가 종료될 수 있다.<br>
+- 인스턴스의 디스크 용량이 부족하면 SSH 서버가 종료될 수 있다.
+
+<br>
+
 <details>
 <summary>💣 자세한 Trouble shooting 기록</summary>
 <div markdown="1">
@@ -154,3 +171,57 @@
 <br>
 </div>
 </details>
+
+<br>
+
+## 내가 맡은 큰 틀
+<br>
+
+### 1. 모델 생성
+<br>
+
+	모델을 생성할 때 딥러닝 또는 머신러닝에 많은 지식을 갖고 있지 않았기 때문에 많은 어려움을 겪었습니다.
+ 
+ 	또한 추천이라는 특정 주제가 성능을 나타내기 힘든 점이 있어 모델 간 성능 비교를 하지 못한 한계점이 있습니다.
+    관련 논문을 찾아보니 "음악을 듣는(부르는) 순서에는 음악 간의 유사성에 대한 풍부한 정보가 담겨져 있고,
+	현재 듣는(부르는) 노래는 사용자의 감정을 불러 일으켜 후속곡 선택에 영향을 미친다." 라는 문장을 확인하였고, 
+ 	저희 프로젝트에 굉장히 부합되는 생각이라고 판단하였습니다.
+  
+ 	위의 내용으로 통해 저희가 Word2Vec을 통해 모델을 학습시킨 이유는 아래와 같습니다.
+  
+  	첫째, 사용자들의 평점이 없어도 구현이 가능하다.
+   
+   	둘째, 플레이리스트 단위로 학습을 하므로 플레이리스트에 담긴 곡들의 맥락이 반영된다.
+    
+    셋째, 플레이리스트의 노래간 문맥을 파악한 추천이 가능하다.
+    
+    넷째, 쉽고 빠른 구현이 가능하다.
+
+
+### 2. Airflow를 통한 ETL 파이프라인 구축
+<br>   	
+	
+ 	Airflow를 통해 TJ, KY에서 데이터를 크롤링(수집)하여 Google Cloud Storage에 적재하고 
+ 	필요한 데이터를 전처리 후 PostgreSQL로 전송하는 일련의 과정을 자동화하였습니다.
+
+  	위의 내용을 자동화하는 과정 중에서 DB에 적재할 때 PK, FK 때문에 생기는 중복에 대한 처리도 해주었습니다.
+
+	또한 celery를 이용할 때 로그 데이터를 redis에 임시저장을 해주는 로직을 구현하여, 
+ 	redis에서 특정 날짜에 들어온 데이터만 mongoDB로 전송하는 과정도 자동화했습니다.
+  
+	mongoDB에 있는 데이터를 모델의 학습 데이터로 다시 사용하는 과정도 자동화시켜 하루마다 모델이 업데이트됩니다.
+
+ 	즉, 모든 일련의 과정이 자동화되어 지속적으로 서비스가 제공될 수 있게 설계하였습니다.
+
+
+  ### 3. DB 서버 구축
+  <br>
+
+  	저희 데이터를 수집, 사용하기 위해 DATABASE가 필요하여 DB서버를 구축하였고 DB서버와 다른 인스턴스끼리 통신을 할 수 있게 설정을 해주었습니다.
+   	사용한 DATABASE는 다음과 같습니다.
+    	
+	실제 서비스를 위한 데이터, 사용자에 대한 데이터 적재 => PostgreSQL
+	로그 데이터 임시 저장 => Redis
+	로그 데이터를 모두 적재 => MongoDB
+
+  	
