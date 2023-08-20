@@ -44,7 +44,7 @@
 >기술 스택:  
 >Python / Doc2Vec / K-Means    
 >  
->[프로젝트 상세 설명](https://github.com/tbtgmltn97/VOC-kmeans) 참고
+>[프로젝트 상세 설명](https://github.com/tbtgmltn97/portfolio/blob/main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/VOC.md) 참고
 
 ---
 
