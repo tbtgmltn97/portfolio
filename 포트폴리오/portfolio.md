@@ -25,7 +25,7 @@
 
 ## :pushpin: Projects
 ### 1. [Alsong-Dlsong](https://github.com/romantiveloper/Alsong-Dlsong)
->부를곡 추천 서비스 (팀 프로젝트)  
+>부를곡 추천 서비스 (팀 프로젝트)
 >개발 기간: 2023.06.01 ~ 2023.08.11  
 >  
 >기술 스택:  
@@ -38,15 +38,13 @@
 
 ---
 
-### 2. [두 번째 프로젝트]()
->두 번째 프로젝트 간략 소개  (팀 프로젝트)  
->개발 기간: 2020.7.18 ~ 2020.11.5  
->  
+### 2. [소상공인의 효과적인 VOC 분석을 위한 Doc2Vec 활용](https://github.com/tbtgmltn97/VOC-kmeans)
+>개발 기간: 2022.06.15 ~ 2022.06.30  
+>
 >기술 스택:  
->Java 8 / Spring Boot / Gradle / Spring Data JPA / QueryDSL  
->H2 / MySQL / Spring Security / Jsoup / Vue.js / Element U  
+>Python / Doc2Vec / K-Means    
 >  
->[프로젝트 상세 설명](https://github.com/Integerous/goQuality) 참고
+>[프로젝트 상세 설명](https://github.com/tbtgmltn97/VOC-kmeans) 참고
 
 ---
 
