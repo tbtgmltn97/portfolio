@@ -25,7 +25,7 @@
 
 ## :pushpin: Projects
 ### 1. [Alsong-Dlsong](https://github.com/tbtgmltn97/portfolio/blob/main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/Alsong-Dlsong.md)
->부를곡 추천 서비스 (팀 프로젝트)
+>부를곡 추천 서비스 (팀 프로젝트) <br>
 >개발 기간: 2023.06.01 ~ 2023.08.11  
 >  
 >기술 스택:  
