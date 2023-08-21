@@ -50,7 +50,7 @@
 
 ### 3. [닮은꼴 추출기](https://github.com/tbtgmltn97/portfolio/blob/main/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/cnn-project.md)
 >개발 기간: 2022.05.15 ~ 2022.05.19  
->https://github.com/tbtgmltn97/CNN-project
+>
 >기술 스택:  
 >Python / CNN     
 >  
